@@ -7,21 +7,24 @@
         <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
     </head>
     <body>
-        <a-scene>
-            <a-entity id="cameraRig">
-                <!-- camera -->
-                <a-entity id="head" camera wasd-controls look-controls></a-entity>
-                <!-- hand controls -->
-                <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-                <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-              </a-entity>
+        <a-scene background="color:#FFFFFF">
+                    <!-- camera rig -->
+                    <a-entity id="cam-rig" position="0 0 6"></a-entity>
+                    <!-- camera -->
+                    <a-camera id="head"></a-camera>
+                    <!-- teleport controls -->
+                    </a-entity teleport-controls="cameraRig: #cam-rig;
+                                                  teleportOrigin: #head" >
+                    </a-entity>
+                    <!-- hand controls -->
+                    <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+                    <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
                 
-
-                <a-box position ="0 1.5 -2" id="red"></a-box>
-                <a-box position ="0 2.5 -2" id="white"></a-box>
+                <a-plane rotation="-90 0 0" scale="8 16 1"></a-plane>
+                <a-cyllinder position ="0 0.5 0" radius="0.5"></a-cyllinder>
+                <a-box position ="0 0.5 -4.5"></a-box>
             
             
-            <a-sky></a-sky>
 
         </a-scene>
         
