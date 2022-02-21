@@ -12,13 +12,11 @@
                     <!-- camera -->
                     <a-camera id="head"></a-camera>
                     <!-- teleport controls -->
-                    <a-entity teleport-controls="cameraRig: #cam-rig;
-                                                  teleportOrigin: #head" 
-                                                  laser-controls>
+                    <a-entity teleport-controls="cameraRig: #cam-rig; teleportOrigin: #head;"laser-controls>
                     </a-entity>
                     <!-- hand controls -->
-                    <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
-                    <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+                    <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;" laser-controls></a-entity>
+                    <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"  laser-controls></a-entity>
                 
                 <a-plane rotation="-90 0 0" scale="8 16 1"></a-plane>
                 <a-cylinder position ="0 0.5 0" radius="0.5"></a-cylinder>
